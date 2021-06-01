@@ -1,0 +1,177 @@
+<!-- <div class="container"> -->
+    <div class="section">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 col-sm-11" >
+              <div class="details">
+                <div class="header-details">
+                  <p>Qty</p>
+                  <p>Unit</p>
+                  <p>Food</p>
+                  <p>Calories</p>
+                  <p>Weight</p>
+            
+                </div>
+                <div class="header-details border" *ngFor="let title of  headerIngr;let j=index">
+                  <p>{{title.quantityData}}</p>
+                  <p>{{title.measureData}}</p>
+                  <p>{{title.foodData}}</p>
+                  <p>{{title.calc | number:'1.0-0'}} {{title.calcUnit}}</p>
+                  <p>{{title.weightData | number:'1.0-0'}}</p>
+                </div>
+          
+              </div>
+           
+           
+          </div>
+          
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-lg-4 col-sm-11">
+                <button (click)="total()" class="button-analysis mg-r-20" mat-button>Total Nutrition</button>
+                <button (click)="return()" class="button-analysis" mat-button>New Recipe</button>
+            </div>
+         
+        </div>
+        <div *ngIf="totalNutritionTable" class="row">
+          <div class="col-md-5 col-lg-4 col-sm-11">
+            <div class="header">
+              <div class="first-header-div">
+                <h1 class="first-header">Nutrition Fact</h1>
+      
+              </div>
+              <div class="second-header-div">
+                <h1 class="second-header">Amount Per Serving</h1>
+                <div class="display">
+                  <div class="title">
+                    <P>Calerioes</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{totalCalory}}</p>
+                  </div>
+                </div>
+      
+      
+              </div>
+             
+                <p class="percentage">% Daily Value*</p>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Total{{fatLabel}} :- {{fatQuantity | number:'1.0-0'}} {{fatUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{fatpercentage | number:'1.0-0'}}{{fatpercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>{{standardLabel}} :- {{fatStandardQuantity | number:'1.0-0'}} {{fatStandardUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{fatStandardpercentage | number:'1.0-0'}}{{fatStandardpercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Cholesterol :- {{CholesterolQuantity | number:'1.0-0'}} {{CholesterolUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Cholesterolpercentage | number:'1.0-0'}}{{CholesterolpercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Sodium :- {{sodiumQuantity | number:'1.0-0'}} {{sodiumUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{sodiumpercentage | number:'1.0-0'}}{{sodiumpercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Total Carbohydrate :- {{CarbohydrateQuantity | number:'1.0-0'}} {{CarbohydrateUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Carbohydratepercentage | number:'1.0-0'}}{{CarbohydratepercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Dietary Fiber :- {{FiberQuantity | number:'1.0-0'}} {{FiberUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Fiberpercentage | number:'1.0-0'}}{{FiberpercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Total Sugars :- {{SugarsQuantity | number:'1.0-0'}} {{SugarsUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Sugarspercentage | number:'1.0-0'}}{{SugarspercentageUnit}}</p>
+                  </div>
+                </div>
+                <div class="display-2">
+                  <div class="title">
+                    <P>Protein :- {{ProteinQuantity | number:'1.0-0'}} {{ProteinUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Proteinpercentage | number:'1.0-0'}}{{ProteinpercentageUnit}}</p>
+                  </div>
+                </div>
+                 <div class="display-2">
+                  <div class="title">
+                    <P>Vitamin D :- {{VitaminQuantity | number:'1.0-0'}} {{VitaminUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Vitaminpercentage | number:'1.0-0'}}{{VitaminpercentageUnit}}</p>
+                  </div>
+                </div> 
+                 <div class="display-2">
+                  <div class="title">
+                    <P>Calcium :- {{CalciumQuantity | number:'1.0-0'}} {{CalciumUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Calciumpercentage | number:'1.0-0'}}{{CalciumpercentageUnit}}</p>
+                  </div>
+                </div>
+      
+                <div class="display-2">
+                  <div class="title">
+                    <P>Iron :- {{IronQuantity | number:'1.0-0'}} {{IronUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Ironpercentage | number:'1.0-0'}}{{IronpercentageUnit}}</p>
+                  </div>
+                </div>
+      
+                <div class="display-2 none">
+                  <div class="title">
+                    <P>Potassium :- {{PotassiumQuantity | number:'1.0-0'}} {{PotassiumUnit}}</P>
+      
+                  </div>
+                  <div class="data">
+                    <p>{{Potassiumpercentage | number:'1.0-0'}}{{PotassiumpercentageUnit}}</p>
+                  </div>
+                </div> 
+            </div>
+      
+          </div>
+        </div>
+     
+      
+      </div>
+      
+      <!-- </div> -->
+      <!-- <app-nutrition-result></app-nutrition-result> -->

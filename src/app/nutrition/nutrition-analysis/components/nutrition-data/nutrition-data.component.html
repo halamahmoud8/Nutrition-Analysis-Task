@@ -1,0 +1,28 @@
+<!-- <div class="container"> -->
+<div class="section">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12 p-0">
+      <p class="page-title">Enter an ingredient list list for what you are cooking, like "1 cup rice, 10 oz chickpeas", etc.
+        Enter each ingredient on a new line.</p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9 col-lg-6 col-sm-11">
+      <form [formGroup]="nutritionForm">
+        <div class="row"  >
+          <mat-form-field class="example-full-width">
+            
+            <textarea formControlName="ingr" matInput  ></textarea>
+          </mat-form-field>
+        </div>
+        <button (click)="onclickAnalysis()" class="button-analysis" mat-button>Analysis</button>
+      </form>
+    </div>
+  </div>
+  
+
+</div>
+
+<!-- </div> -->
+<!-- <app-nutrition-result></app-nutrition-result> -->
