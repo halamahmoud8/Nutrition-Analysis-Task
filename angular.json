@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MyAppMedical": {
+    "NutritionAnalysisTask": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MyAppMedical",
+            "outputPath": "dist/NutritionAnalysisTask",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MyAppMedical:build"
+            "browserTarget": "NutritionAnalysisTask:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MyAppMedical:build:production"
+              "browserTarget": "NutritionAnalysisTask:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MyAppMedical:build"
+            "browserTarget": "NutritionAnalysisTask:build"
           }
         },
         "test": {
@@ -118,18 +118,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MyAppMedical:serve"
+            "devServerTarget": "NutritionAnalysisTask:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MyAppMedical:serve:production"
+              "devServerTarget": "NutritionAnalysisTask:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "MyAppMedical",
+  "defaultProject": "NutritionAnalysisTask",
   "cli": {
     "analytics": "d7e2f438-844f-432c-9370-8721ba2b0cd8"
   }
